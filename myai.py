@@ -16,6 +16,7 @@ class Learner:
     def fit(self,n_epochs):
         self.call_cbs('before_fit')
         for ep in range(n_epochs):
+            self.epoch=ep
             self.training=True
             self.call_cbs('before_epoch')
             for self.xb,self.yb in self.trdl:
